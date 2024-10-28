@@ -1,9 +1,10 @@
 import React from 'react'
 
 import driversimg from "../Images/driver.png"
+import hostimg from "../Images/host.png"
+import oursoltionimg from '../Images/oursolution.png'
 
-
-function MegaMenus({ activeNavItem, setIsNavItemHover ,toggleForm }) {
+function MegaMenus({ activeNavItem, setIsNavItemHover, toggleForm }) {
 
   const navsitm = document.getElementById(activeNavItem)
 
@@ -28,7 +29,7 @@ function MegaMenus({ activeNavItem, setIsNavItemHover ,toggleForm }) {
           <div className="mega-menu">
             <div className="mega-menu-content">
               <div className="mega-menu-image">
-                <img src={driversimg} alt="Driver using ChargeBay app" />
+                <img src={driversimg} alt="Driver using ChargeBay app" draggable='false' />
               </div>
               <div className="mega-menu-links">
                 <div className="mega-menu-column">
@@ -57,22 +58,25 @@ function MegaMenus({ activeNavItem, setIsNavItemHover ,toggleForm }) {
           <div className="mega-menu">
             <div className="mega-menu-content">
               <div className="mega-menu-image">
-                <img src={driversimg} alt="ChargeBay station host" />
+                <img src={hostimg} alt="ChargeBay station host" draggable='false' />
               </div>
               <div className="mega-menu-links">
                 <div className="mega-menu-column">
-                  <h3>HOST</h3>
+                  <h3>PROPERTIES</h3>
                   <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">Multifamily Housing </a></li>
+                    <li><a href="#">Commercial Worspace & Retail</a></li>
                     <li><a href="#"></a></li>
                   </ul>
                 </div>
                 <div className="mega-menu-column">
-                  <h3></h3>
+                  <h3>RESOURCES</h3>
                   <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">Host Login</a></li>
+                    <li><a href="#">Charging Bussiness</a></li>
+                    <li><a href="#">Commercial Incentive Lookup</a></li>
+                    <li><a href="#">Support & Sales </a></li>
+                    <li><a href="#">Host FAQs</a></li>
                   </ul>
                 </div>
               </div>
@@ -86,21 +90,21 @@ function MegaMenus({ activeNavItem, setIsNavItemHover ,toggleForm }) {
           <div className="mega-menu">
             <div className="mega-menu-content">
               <div className="mega-menu-image">
-                <img src={driversimg} alt="ChargeBay solution overview" />
+                <img src={oursoltionimg} alt="ChargeBay solution overview" draggable='false' />
               </div>
               <div className="mega-menu-links">
                 <div className="mega-menu-column">
-                  <h3>OUR Solutions</h3>
+                  <h3>PRODUCTS</h3>
                   <ul>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">All Products</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                   </ul>
                 </div>
                 <div className="mega-menu-column">
-                  <h3></h3>
+                  <h3>Resseller</h3>
                   <ul>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">Become a Resseller</a></li>
                     <li><a href="#"></a></li>
                   </ul>
                 </div>

@@ -248,8 +248,8 @@ const ChargeBayHome = () => {
             </AnimatedSection>
             <div className="hero-image">
               <AnimatedSection animation="scaleIn">
-                <img src={devicesimgmob} className='devicesimgmob' />
-                <img src={devicesimg} className='devicesimgdesk' />
+                <img src={devicesimgmob} className='devicesimgmob' draggable='false'/>
+                <img src={devicesimg} className='devicesimgdesk' draggable='false'/>
               </AnimatedSection>
             </div>
           </section>
@@ -265,7 +265,7 @@ const ChargeBayHome = () => {
         <section className="streamlinesection">
           <div className='streamline'>
             <p>Designed to streamline the complexities of multi-vehicle EV charging stations, ChargeBay provides <span className="highlight-black">seamless charging & power management</span> for any commercial development, along with easy booking and scheduling convenience for customers.</p>
-            <button className="learn-more"><span>Learn More</span></button>
+            <button className="learn-more-white transperant"><span>Learn More</span></button>
           </div>
 
           <div className='chargerimagediv'>
@@ -344,7 +344,7 @@ const ChargeBayHome = () => {
             <h1>
               ChargeBay App,
               <br />
-              A <span className="highlight">One-Stop Solution</span> for
+              A <span className="highlight-blue">One-Stop Solution</span> for
             </h1>
             <div>
               <div className='feature-two-btn'>
@@ -402,8 +402,8 @@ const ChargeBayHome = () => {
         <section className="map">
           <h2>ChargeBay- Making EV Charging <span className="highlight-green">Easy</span></h2>
           <div className="map-container">
-            <img src={mapimg} alt="" className='mapdesk' />
-            <img src={mapimgmob} alt="" className='mapmob' />
+            <img src={mapimg} alt="" className='mapdesk' draggable='false'/>
+            <img src={mapimgmob} alt="" className='mapmob' draggable='false'/>
           </div>
         </section>
 
@@ -418,16 +418,16 @@ const ChargeBayHome = () => {
         <section className="featured">
           <h2>Featured in</h2>
           <div className="featured-logos">
-            <img src={featured} alt="Featured" />
+            <img src={featured} alt="Featured" draggable='false'/>
           </div>
         </section>
 
         <section className='revolution-section'>
           <AnimatedSection animation='flyIn' direction='down'>
             <div className='revolution'>
-              <h1>Electric <span className='highlight'>Revolution</span>  in the US in numbers :</h1>
-              <h3>There is a gap in the no of EV and available chargers, <span className='highlight'>Chargeay</span> Helps to fill this gap</h3>
-              <button className='learn-more'><span>Learn More</span></button>
+              <h1>Electric <span className='highlight-blue'>Revolution</span>  in the US in numbers :</h1>
+              <h3>There is a gap in the no of EV and available chargers, <span className='highlight-blue'>Chargeay</span> Helps to fill this gap</h3>
+              <button className='learn-more-white transperant'><span>Learn More</span></button>
             </div>
             <img src={revolution} alt="revolution image" />
           </AnimatedSection>

@@ -140,7 +140,7 @@
     border-radius: 29px;
     object-fit: contain;
 }
-   
+
 /*# seamless section end*/
 
 .abt-charging-why-chargebay {
@@ -237,8 +237,9 @@
     width: 340px;
 }
 
-.app-download {
+.app-download.abt-chargings {
     margin: 8rem 8rem;
+    margin-top: 2rem;
 }
 
 .app-download h2 {
@@ -280,7 +281,7 @@
 
 /*# asked-que section end*/
 
-@media (max-width: 480px) {
+@media (max-width: 786px) {
 
     /*# chargings-hero section start*/
     .chargings-hero {
@@ -428,7 +429,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-       
+
     }
 
     .seamless-card-overlay {
@@ -484,7 +485,7 @@
 
     /*end*/
     /*# seamless-carousel section for mobile view only*/
-    
+
     /*# seamless section end*/
 
     .evdriverssection {
@@ -538,7 +539,8 @@
         display: grid;
         grid-template-columns: 1fr;
         align-items: start;
-        gap: 0 2rem;
+        margin-top: 4rem;
+        gap: 10px;
     }
 
     .abt-charging-why-chargebay-feature {
@@ -549,6 +551,7 @@
     .abt-charging-why-chargebay-icon {
         font-size: 28px;
         width: 35px;
+        margin-right: 25px;
     }
 
     .abt-charging-why-chargebay-feature-title {
@@ -558,6 +561,11 @@
         line-height: 1.5;
         width: 84%;
         margin: 0;
+    }
+
+    .app-download.abt-chargings {
+        margin: 1rem 1rem;
+        margin-top: 2rem;
     }
 
     /*# discover section start*/

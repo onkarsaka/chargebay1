@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import { Link } from 'react-router-dom';
 import "../Pages/chargebayHome.css"
 
 import AnimatedSection from './AnimatedSection'
@@ -7,7 +8,7 @@ import logo from "../Images/Logo White.png"
 import logomob from "../Images/Logo Black.png"
 
 import { ChevronDown } from 'lucide-react'
-import { Link } from 'react-router-dom'
+
 
 
 const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
@@ -27,7 +28,7 @@ const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
       <header className="header">
         <AnimatedSection animation="flyIn" direction="up">
           <div className="logo">
-            <img src={logo} alt="Logo" />
+          <Link to="/"><img src={logo} alt="Logo" draggable="false"/></Link>
           </div>
         </AnimatedSection>
         <AnimatedSection animation="flyIn" direction="up">

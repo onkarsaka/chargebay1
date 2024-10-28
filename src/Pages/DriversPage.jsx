@@ -8,12 +8,17 @@ import Footer from '../Components/Footer';
 import mobimg from '../Images/img2.png'
 
 import sampleimg from "../Images/sample charger.png"
+import seamlessimg1 from '../Images/seamless img1.png'
+import seamlessimg2 from '../Images/seamless img2.png'
+import seamlessimg3 from '../Images/seamless img3.png'
 
 import AnimatedSection from '../Components/AnimatedSection';
 
 import multifamilybannerimg from "../Images/multifamilyhero.png"
+import driversbannerimg from '../Images/driverspagebanner.png'
 
 import chargerimg from "../Images/charger.png"
+import routeicon from "../Images/route.svg"
 
 import playstore from "../Images/googleplay.png"
 import appstore from "../Images/appstore 1.png"
@@ -53,14 +58,6 @@ function AboutChargingPage() {
         }
     };
 
-    const Feature = ({ icon, title }) => {
-        return (
-            <div className="abt-charging-why-chargebay-feature">
-                <div className="abt-charging-why-chargebay-icon">{icon}</div>
-                <p className="abt-charging-why-chargebay-feature-title">{title}</p>
-            </div>
-        );
-    };
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const titles = [
@@ -70,15 +67,15 @@ function AboutChargingPage() {
     ];
 
     const images = [
-        sampleimg,
-        sampleimg,
-        sampleimg,
+        seamlessimg1,
+        seamlessimg2,
+        seamlessimg3,
     ];
 
     const titles2 = [
-        { id: 1, text: 'The ChargeBay App' , heighttext : 'seamless-card-title-lowheight'},
+        { id: 1, text: 'The ChargeBay App', heighttext: 'seamless-card-title-lowheight' },
         { id: 2, text: 'Pay as you go ', subText: "with ChargeBay card" },
-        { id: 3, text: 'Instant charging with our app-clips simply scan the QR code', heighttext : 'seamless-card-title-highheight'},
+        { id: 3, text: 'Instant charging with our app-clips simply scan the QR code', heighttext: 'seamless-card-title-highheight' },
     ];
 
     useEffect(() => {
@@ -98,7 +95,7 @@ function AboutChargingPage() {
     return (
         <>
             <main>
-                <section id="hero-header" style={{ backgroundImage: `url(${multifamilybannerimg})` }}>
+                <section id="hero-header" style={{ backgroundImage: `url(${driversbannerimg})` }}>
                     <header>
                         <Header isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} toggleForm={toggleForm} setIsNavItemHover={setActiveNavItem} activeNavItem={activeNavItem} />
                     </header>
@@ -111,7 +108,7 @@ function AboutChargingPage() {
                         </div>
 
                         <div className="chargings-hero-image">
-                            <img src={mobimg} alt="" />
+                            <img src={mobimg} alt="" draggable='false' />
                         </div>
                     </section>
 
@@ -144,7 +141,11 @@ function AboutChargingPage() {
                                 >
                                     {images.map((src, index) => (
                                         <div key={index} className="seamless-section-image-wrapper">
-                                            <img src={src} alt={`ChargeBay feature ${index}`} />
+                                            <img
+                                                src={src}
+                                                alt={`ChargeBay feature ${index}`}
+                                                draggable='false'
+                                            />
                                         </div>
                                     ))}
                                 </div>
@@ -157,6 +158,7 @@ function AboutChargingPage() {
                                 <img
                                     src={images[currentIndex2]}
                                     className="seamless-card-images"
+                                    draggable='false'
                                 />
                                 <div className="seamless-card-overlay">
                                     <h3 className={`seamless-card-title ${titles2[currentIndex2].heighttext}`}>{titles2[currentIndex2].text}</h3>
@@ -180,7 +182,7 @@ function AboutChargingPage() {
                         <button className="learn-more-white transperant"><span>Learn More</span></button>
                     </div>
                     <div className="evdriversimage">
-                        <img src={chargerimg} alt="" />
+                        <img src={chargerimg} alt="" draggable="false" />
                     </div>
                 </section>
 
@@ -189,30 +191,61 @@ function AboutChargingPage() {
                         But <span className="abt-charging-highlight">Why</span> ChargeBay?
                     </h2>
                     <div className="abt-charging-why-chargebay-features">
-                        <Feature
-                            icon="⚡"
-                            title="Seamless EV charging experience with a one-stop solution."
-                        />
-                        <Feature
-                            icon="☰"
-                            title="Conveniently Booking and Charging"
-                        />
-                        <Feature
-                            icon="🕒"
-                            title="Real-Time & Personalised Updates"
-                        />
-                        <Feature
-                            icon="🗺️"
-                            title="Plan Efficient Charging Trips"
-                        />
-                        <Feature
-                            icon="💳"
-                            title="Hassle-Free Direct Payment"
-                        />
+
+                        <div className="abt-charging-why-chargebay-feature">
+                            <div className="abt-charging-why-chargebay-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 2L3 14H11L10 22L20 10H13L13 2Z" stroke="#3A86FF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p className="abt-charging-why-chargebay-feature-title">Seamless EV charging experience with a one-stop solution.</p>
+                        </div>
+
+                        <div className="abt-charging-why-chargebay-feature">
+                            <div className="abt-charging-why-chargebay-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="8" y1="10" x2="16" y2="10" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="8" y1="12" x2="16" y2="12" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="8" y1="14" x2="16" y2="14" stroke="#3A86FF" stroke-width="1" />
+                                </svg>
+                            </div>
+                            <p className="abt-charging-why-chargebay-feature-title">Conveniently Booking and Charging</p>
+                        </div>
+
+                        <div className="abt-charging-why-chargebay-feature">
+                            <div className="abt-charging-why-chargebay-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#3A86FF" stroke-width="1" />
+                                    <path d="M12 6V12L16 14" stroke="#3A86FF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p className="abt-charging-why-chargebay-feature-title">Real-Time & Personalised Updates</p>
+                        </div>
+
+                        <div className="abt-charging-why-chargebay-feature">
+                            <div className="abt-charging-why-chargebay-icon">
+                                <img src={routeicon} alt="" width={48} height={48}/>
+                            </div>
+                            <p className="abt-charging-why-chargebay-feature-title">Plan Efficient Charging Trips</p>
+                        </div>
+
+                        <div className="abt-charging-why-chargebay-feature">
+                            <div className="abt-charging-why-chargebay-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="6" width="18" height="12" rx="2" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="3" y1="8" x2="21" y2="8" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="3" y1="10" x2="21" y2="10" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="5" y1="13" x2="9" y2="13" stroke="#3A86FF" stroke-width="1" />
+                                    <circle cx="17" cy="15" r="1" fill="#3A86FF" />
+                                </svg>
+                            </div>
+                            <p className="abt-charging-why-chargebay-feature-title">Hassle-Free Direct Payment</p>
+                        </div>
                     </div>
                 </section>
 
-                <section className="app-download">
+                <section className="app-download abt-chargings">
                     <h2>Find out how seamless EV charging can be. Download the ChargeBay app</h2>
                     <div className="app-buttons">
                         <img src={playstore} alt="Get it on Google Play" />

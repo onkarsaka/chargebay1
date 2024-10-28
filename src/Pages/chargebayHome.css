@@ -127,7 +127,7 @@ nav ul {
     display: flex;
     justify-content: center;
     border-radius: 19px;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
     animation: fadeIn .8s forwards;
 }
 
@@ -363,7 +363,7 @@ nav ul {
     transition: color 0.4s ease;
 }
 
-.learn-more-white.transperant{
+.learn-more-white.transperant {
     background-color: #0000;
 }
 
@@ -457,7 +457,8 @@ nav ul {
     background-color: var(--white);
     padding: 20px;
     border-radius: 29px;
-    animation: slideIn 1s ease-out;
+    transition: all 0.3 ease;
+    animation: slideIn 2s ease-out;
 }
 
 @keyframes fadeIn {
@@ -496,7 +497,7 @@ nav ul {
 }
 
 .slide-out {
-    animation: slideOut 1s ease-out forwards;
+    animation: slideOut 1s ease-out;
 }
 
 .close-button {
@@ -567,7 +568,7 @@ label {
     background-color: var(--black);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 786px) {
     .contact-form-overlay {
         width: 100%;
     }
@@ -639,8 +640,8 @@ label {
 .streamline p {
     font-size: 1.6rem;
     max-width: 800px;
-    font-weight: 200;
-    color: var(--subtitle-gray);
+    font-weight: 100;
+    color: #969696;
 }
 
 
@@ -711,6 +712,7 @@ label {
     border-radius: 19px;
 }
 
+
 .app-download h2 {
     font-size: 2.5rem;
     font-weight: 800;
@@ -738,10 +740,13 @@ label {
     align-items: center;
     margin: 2rem 0;
     flex-wrap: wrap;
+    pointer-events: none;
+    user-select: none;
 }
 
 .featured-logos img {
     margin: 1rem;
+    
 }
 
 .view-more {
@@ -770,7 +775,7 @@ label {
 
 .map {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
     padding-left: 6.8rem;
     background-color: var(--dark-theme);
     color: var(--white);
@@ -893,7 +898,7 @@ label {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 786px) {
     .content {
         flex-direction: column;
     }
@@ -1333,7 +1338,7 @@ label {
     will-change: opacity, transform;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 786px) {
 
     .body {
         margin: 0;
@@ -1905,11 +1910,13 @@ label {
     /*# app-download section start*/
     .app-download {
         padding: 20px;
-        margin: 80px 20px;
+        margin: 60px 20px;
+        margin-bottom: 80px;
     }
 
     .app-download h2 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        padding: 0;
     }
 
     .app-buttons {
