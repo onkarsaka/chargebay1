@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chargebay1/static/css/main.1cfd0ffb.css",
-    "main.js": "/chargebay1/static/js/main.a13e0170.js",
+    "main.js": "/chargebay1/static/js/main.2cad6a0c.js",
     "static/js/488.e361dfc8.chunk.js": "/chargebay1/static/js/488.e361dfc8.chunk.js",
     "static/media/commercialbanner.png": "/chargebay1/static/media/commercialbanner.582d048ab2c51fefcc7f.png",
     "static/media/banner.png": "/chargebay1/static/media/banner.655def1795d4900078f5.png",
@@ -64,11 +64,11 @@
     "index.html": "/chargebay1/index.html",
     "static/media/dropdownarrrowgrey.svg": "/chargebay1/static/media/dropdownarrrowgrey.8a956300e917ad932c23e893449e75d5.svg",
     "main.1cfd0ffb.css.map": "/chargebay1/static/css/main.1cfd0ffb.css.map",
-    "main.a13e0170.js.map": "/chargebay1/static/js/main.a13e0170.js.map",
+    "main.2cad6a0c.js.map": "/chargebay1/static/js/main.2cad6a0c.js.map",
     "488.e361dfc8.chunk.js.map": "/chargebay1/static/js/488.e361dfc8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1cfd0ffb.css",
-    "static/js/main.a13e0170.js"
+    "static/js/main.2cad6a0c.js"
   ]
 }
