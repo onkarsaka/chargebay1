@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chargebay1/static/css/main.1cfd0ffb.css",
-    "main.js": "/chargebay1/static/js/main.2cad6a0c.js",
+    "main.css": "/chargebay1/static/css/main.40e4ff1c.css",
+    "main.js": "/chargebay1/static/js/main.01fdcaf1.js",
     "static/js/488.e361dfc8.chunk.js": "/chargebay1/static/js/488.e361dfc8.chunk.js",
     "static/media/commercialbanner.png": "/chargebay1/static/media/commercialbanner.582d048ab2c51fefcc7f.png",
     "static/media/banner.png": "/chargebay1/static/media/banner.655def1795d4900078f5.png",
@@ -63,12 +63,12 @@
     "static/media/route.svg": "/chargebay1/static/media/route.1d193ff1d67b11f44b22205b4a1fd614.svg",
     "index.html": "/chargebay1/index.html",
     "static/media/dropdownarrrowgrey.svg": "/chargebay1/static/media/dropdownarrrowgrey.8a956300e917ad932c23e893449e75d5.svg",
-    "main.1cfd0ffb.css.map": "/chargebay1/static/css/main.1cfd0ffb.css.map",
-    "main.2cad6a0c.js.map": "/chargebay1/static/js/main.2cad6a0c.js.map",
+    "main.40e4ff1c.css.map": "/chargebay1/static/css/main.40e4ff1c.css.map",
+    "main.01fdcaf1.js.map": "/chargebay1/static/js/main.01fdcaf1.js.map",
     "488.e361dfc8.chunk.js.map": "/chargebay1/static/js/488.e361dfc8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cfd0ffb.css",
-    "static/js/main.2cad6a0c.js"
+    "static/css/main.40e4ff1c.css",
+    "static/js/main.01fdcaf1.js"
   ]
 }
