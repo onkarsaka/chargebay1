@@ -217,7 +217,12 @@ nav ul {
 }
 
 .dropdown-menu a:hover {
-    background-color: #2a2a2a;
+    color: var(--highlight-green);
+}
+
+.dropdown-menu h3{
+    color: var(--white);
+    margin-bottom: -.5rem;
 }
 
 .cta-buttons button {
@@ -270,10 +275,14 @@ nav ul {
 .devicesimgdesk {
     display: flex;
     z-index: 0;
+    user-select: none;
+    pointer-events: none;
 }
 
 .devicesimgmob {
     display: none;
+    user-select: none;
+    pointer-events: none;
 }
 
 .learn-more {
@@ -746,7 +755,7 @@ label {
 
 .featured-logos img {
     margin: 1rem;
-    
+
 }
 
 .view-more {
@@ -1339,6 +1348,11 @@ label {
 }
 
 @media (max-width: 786px) {
+    #hero-header {
+        background-size: cover;
+        background-position: right;
+        cursor: default;
+    }
 
     .body {
         margin: 0;
@@ -1375,9 +1389,9 @@ label {
 
     .logo-nav img {
         width: 200px;
-        margin: -8px;
-        margin-top: -15px;
-        margin-bottom: 20px;
+        margin: -10px;
+        margin-top: -19px;
+        margin-bottom: 25px;
     }
 
     .header nav ul {
@@ -1465,7 +1479,7 @@ label {
 
     .header .menu-toggle {
         display: block;
-        width: 40px;
+        width: 50px;
         background: none;
         border: 1.8px solid var(--white);
         border-radius: 99px;

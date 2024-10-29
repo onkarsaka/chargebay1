@@ -1,15 +1,14 @@
 import React from 'react';
 import './chargebayHome.css';
-import { useState, useEffect, useRef, contentRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import AnimatedSection from '../Components/AnimatedSection';
 
 import logo from "../Images/Logo White.png"
 import logomob from "../Images/Logo Black.png"
 
 import bannerimg from "../Images/banner.png"
-
 
 import devicesimg from "../Images/devices.png"
 import devicesimgmob from "../Images/devices mobview.png"
@@ -230,6 +229,22 @@ const ChargeBayHome = () => {
     }
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#map-section') {
+      const element = document.getElementById('map-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (location.hash === '#app-demo') {
+      const element = document.getElementById('app-demo');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="chargebay-home">
       <main>
@@ -248,8 +263,8 @@ const ChargeBayHome = () => {
             </AnimatedSection>
             <div className="hero-image">
               <AnimatedSection animation="scaleIn">
-                <img src={devicesimgmob} className='devicesimgmob' draggable='false'/>
-                <img src={devicesimg} className='devicesimgdesk' draggable='false'/>
+                <img src={devicesimgmob} className='devicesimgmob' draggable='false' />
+                <img src={devicesimg} className='devicesimgdesk' draggable='false' />
               </AnimatedSection>
             </div>
           </section>
@@ -339,8 +354,8 @@ const ChargeBayHome = () => {
           </AnimatedSection>
         </section>
 
-        <section className="app-features">
-          <div className="app-content">
+        <section  className="app-features">
+          <div className="app-content" id='app-demo'>
             <h1>
               ChargeBay App,
               <br />
@@ -399,11 +414,11 @@ const ChargeBayHome = () => {
           </AnimatedSection>
         </section>
 
-        <section className="map">
+        <section id="map-section" className="map" >
           <h2>ChargeBay- Making EV Charging <span className="highlight-green">Easy</span></h2>
           <div className="map-container">
-            <img src={mapimg} alt="" className='mapdesk' draggable='false'/>
-            <img src={mapimgmob} alt="" className='mapmob' draggable='false'/>
+            <img src={mapimg} alt="" className='mapdesk' draggable='false' />
+            <img src={mapimgmob} alt="" className='mapmob' draggable='false' />
           </div>
         </section>
 
@@ -418,7 +433,7 @@ const ChargeBayHome = () => {
         <section className="featured">
           <h2>Featured in</h2>
           <div className="featured-logos">
-            <img src={featured} alt="Featured" draggable='false'/>
+            <img src={featured} alt="Featured" draggable='false' />
           </div>
         </section>
 

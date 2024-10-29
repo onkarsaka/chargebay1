@@ -1,5 +1,6 @@
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import "../Pages/chargebayHome.css"
 
 import AnimatedSection from './AnimatedSection'
@@ -28,7 +29,7 @@ const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
       <header className="header">
         <AnimatedSection animation="flyIn" direction="up">
           <div className="logo">
-          <Link to="/"><img src={logo} alt="Logo" draggable="false"/></Link>
+            <Link to="/"><img src={logo} alt="Logo" draggable="false" /></Link>
           </div>
         </AnimatedSection>
         <AnimatedSection animation="flyIn" direction="up">
@@ -79,25 +80,48 @@ const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
               <li className="nav-item">
                 <a className="nav-link">Drivers <ChevronDown className="dropdown-arrow"></ChevronDown></a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 2</a></li>
-                  <li><a href="#">Item 3</a></li>
+                  <li>
+                    <h3>CHARGERS</h3>
+                    <li><a href="#">Find A Charger</a></li>
+                    <li><a href="#">Get started with the ChargeBay app</a></li>
+                    <li><a href="#">Why Use ChargeBay?</a></li>
+                  </li>
+                  <li>
+                    <h3>RESOURCES</h3>
+                    <li><a href="#">Driver FAQs</a></li>
+                    <li><a onClick={toggleForm}>Get Help</a></li>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link">Hosts <ChevronDown className="dropdown-arrow"></ChevronDown></a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 2</a></li>
-                  <li><a href="#">Item 3</a></li>
+                  <li>
+                    <h3>PROPERTIES</h3>
+                    <li><a href="#">Multifamily Housing </a></li>
+                    <li><a href="#">Commercial Worspace & Retail</a></li>
+                  </li>
+                  <li>
+                    <h3>RESOURCES</h3>
+                    <li><a href="#">Host Login</a></li>
+                    <li><a href="#">Charging Bussiness</a></li>
+                    <li><a href="#">Commercial Incentive Lookup</a></li>
+                    <li><a href="#">Support & Sales </a></li>
+                    <li><a href="#">Host FAQs</a></li>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link">Our Solution <ChevronDown className="dropdown-arrow"></ChevronDown></a>
                 <ul className="dropdown-menu">
-                  <li><a href="#">Item 1</a></li>
-                  <li><a href="#">Item 2</a></li>
-                  <li><a href="#">Item 3</a></li>
+                  <li>
+                    <h3>PRODUCTS</h3>
+                    <li><a href="#">All Products</a></li>
+                  </li>
+                  <li>
+                    <h3>Resseller</h3>
+                    <li><a href="#">Become a Resseller</a></li>
+                  </li>
                 </ul>
               </li>
               <li className="nav-item">

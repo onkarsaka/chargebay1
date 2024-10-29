@@ -1,6 +1,6 @@
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 // Use this ↑ for deploying on AWS (uncomment)
-// import { HashRouter as Router, Route ,Routes } from 'react-router-dom';
+import { HashRouter as Router, Route ,Routes } from 'react-router-dom';
 // Use this ↑ for deploying on GitHuB (uncomment)
 import './App.css';
 import HomePage from './Pages/chargebayHome';
@@ -20,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/underconstruction' element={<UnderConstructionPage />} />
+        <Route path='/page1' element={<HomePage />} />
         <Route path='/page2' element={<MultiFamilyHostPage />} />
         <Route path='/page3' element={<DriversPage />} />
         <Route path='/page4' element={<GetInTouch />} />

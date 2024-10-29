@@ -22,7 +22,7 @@
 .logo-img {
     width: 250px;
     height: 50px;
-
+    margin-left: -1.2rem;
 }
 
 .logo-text {
@@ -40,6 +40,15 @@
 
 .email {
     color: white;
+}
+
+.email a{
+    text-decoration: none;
+    color: white;
+}
+
+.email li{
+    list-style-type: none;
 }
 
 .footer-middle {

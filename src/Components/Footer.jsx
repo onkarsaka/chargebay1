@@ -8,6 +8,13 @@ import linkedin from "../Images/in logo.png"
 import yt from "../Images/yt logo.png"
 
 function Footer() {
+    const email1 = "Manan@chargebay.app";
+    const email2 = "operations@chargebay.app";
+
+    const handleEmailClick = (email) => (e) => {
+        e.preventDefault(); // Prevent the default link behavior
+        window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
+    };
     return (
         <>
             <footer className="footer">
@@ -17,7 +24,10 @@ function Footer() {
                             <img src={logo} alt="ChargeBay Logo" className="logo-img" />
                         </div>
                         <span className="address">3702 Spectrum Blvd. Ste. 165<br />Tampa, FL 33612, USA</span>
-                        <span className="email"><br></br>Email: operations@chargebay.app</span>
+                        <span className="email"><br></br>Email:
+                                <li><a href={`mailto:${email1}`} onClick={handleEmailClick}>{email1}</a></li>
+                                <li><a href={`mailto:${email2}`} onClick={handleEmailClick}>{email2}</a></li>
+                        </span>
                     </div>
                     <div className="footer-middle">
                         <div className="footer-links">

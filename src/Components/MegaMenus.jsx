@@ -1,5 +1,6 @@
-import React from 'react'
-
+import { React, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom';
 import driversimg from "../Images/driver.png"
 import hostimg from "../Images/host.png"
 import oursoltionimg from '../Images/oursolution.png'
@@ -22,6 +23,7 @@ function MegaMenus({ activeNavItem, setIsNavItemHover, toggleForm }) {
     navsitm.style.backgroundColor = "#0000";
   };
 
+
   switch (activeNavItem) {
     case 'drivers':
       return (
@@ -35,15 +37,15 @@ function MegaMenus({ activeNavItem, setIsNavItemHover, toggleForm }) {
                 <div className="mega-menu-column">
                   <h3>CHARGERS</h3>
                   <ul>
-                    <li><a href="#">Find A Charger</a></li>
-                    <li><a href="#">Get started with the ChargeBay app</a></li>
+                    <li><a href="/page1#viewmaphere"><Link to="/page1#map-section">Find A Charger</Link></a></li>
+                    <li><a href="#"><li><a href="/page1#viewmaphere"><Link to="/page1#app-demo">Get started with the ChargeBay app</Link></a></li></a></li>
                     <li><a href="#">Why Use ChargeBay?</a></li>
                   </ul>
                 </div>
                 <div className="mega-menu-column">
                   <h3>RESOURCES</h3>
                   <ul>
-                    <li><a href="#">Driver FAQs</a></li>
+                    <li><a href="#"><Link to="page8">Driver FAQs</Link></a></li>
                     <li><a onClick={toggleForm}>Get Help</a></li>
                   </ul>
                 </div>
