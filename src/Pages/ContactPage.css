@@ -110,7 +110,7 @@
 .reach-us-contact-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .reach-us-form-row {
@@ -162,7 +162,7 @@
 .reach-us-content button {
     font-size: 16px;
     padding: 18px 0px;
-    margin-top: 1rem;
+    margin-top: 25px;
     background-color: var(--dark-theme);
     color: var(--white);
     border-radius: 50px;
@@ -242,6 +242,7 @@
 
     .reach-us select {
         width: auto;
+        margin-bottom: 1rem;
     }
 
 

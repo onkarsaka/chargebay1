@@ -57,6 +57,7 @@ Link {
     align-items: center;
     object-fit: cover;
     width: auto;
+    user-select: none;
 }
 
 .logo img {
@@ -117,8 +118,8 @@ nav ul {
 
 .mega-menu {
     position: absolute;
-    width: 80%;
-    top: 50px;
+    width: 85%;
+    top: 40px;
     left: 5%;
     right: 0;
     background-color: white;
@@ -127,14 +128,13 @@ nav ul {
     display: flex;
     justify-content: center;
     border-radius: 19px;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     animation: fadeIn .8s forwards;
 }
 
 .mega-menu-content {
     display: flex;
     width: 100%;
-    max-width: 1200px;
 }
 
 .mega-menu-image {
@@ -152,10 +152,11 @@ nav ul {
 .mega-menu-links {
     width: 60%;
     display: flex;
+    gap: 0 100px;
 }
 
 .mega-menu-column {
-    width: 50%;
+   width: 50%;
 }
 
 .mega-menu-column h3 {
@@ -176,7 +177,7 @@ nav ul {
 }
 
 .mega-menu-column ul li a {
-    color: var(--black);
+    color:#000000b0;
     text-decoration: none;
     cursor: pointer;
     font-size: 1.2rem;
@@ -185,7 +186,7 @@ nav ul {
 }
 
 .mega-menu-column ul li a:hover {
-    color: #0cc301;
+    color: #000;
 }
 
 .dropdown-menu {
@@ -211,7 +212,8 @@ nav ul {
 
 .dropdown-menu a {
     color: white;
-    padding: 12px 16px;
+    padding: 12px 0;
+    padding-bottom: 5px;
     text-decoration: none;
     display: block;
 }
@@ -220,10 +222,10 @@ nav ul {
     color: var(--highlight-green);
 }
 
-.dropdown-menu h3{
+.dropdown-menu h3 {
     color: var(--white);
-    margin-bottom: -.5rem;
 }
+
 
 .cta-buttons button {
     margin-left: 1rem;
@@ -257,11 +259,12 @@ nav ul {
     font-weight: bold;
     color: var(--white);
     line-height: 1.2;
+    margin-bottom: -0.5rem;
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: var(--white);
 }
 
@@ -830,7 +833,7 @@ label {
 
 .sections {
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
@@ -840,7 +843,7 @@ label {
     color: var(--title-gray);
     font-size: 1.3rem;
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     transition: color 0.3s;
 }
 
@@ -880,11 +883,19 @@ label {
 }
 
 .slide-left {
-    animation: slideLeft 0.5s forwards;
+    animation: slideLeft 0.6s ease;
 }
 
 .slide-right {
-    animation: slideRight 0.5s forwards;
+    animation: slideRight 0.6s ease;
+}
+
+.specialImgCost {
+    border-top: .1px solid #2167b6;
+    border-left: .1px solid #2167b6;
+    border-bottom: .1px solid #8d55ba;
+    border-right: .1px solid #8d55ba;
+    margin-left: -2px;
 }
 
 @keyframes slideLeft {
@@ -910,6 +921,15 @@ label {
 @media (max-width: 786px) {
     .content {
         flex-direction: column;
+    }
+
+    .specialImgCost {
+        border-top: .1px solid #2167b6;
+        border-left: .1px solid #2167b6;
+        border-bottom: .1px solid #8d55ba;
+        border-right: .1px solid #8d55ba;
+        max-width: 99%;
+        margin-left: 0;
     }
 }
 
@@ -1094,12 +1114,13 @@ label {
 }
 
 .sidebar {
-    width: 200px;
+    width: 250px;
     background-color: var(--white);
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     padding-top: 180px;
+    padding-left: 60px;
 }
 
 .tab-button {
@@ -1172,12 +1193,18 @@ label {
     font-size: 2.5rem;
     line-height: 0.5;
     font-weight: 500;
+    margin-bottom: 0rem;
 }
 
 .revolution h3 {
     font-size: 1.5rem;
     font-weight: 500;
     max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.revolution button{
+    margin-bottom: 1rem;
 }
 
 .revolution-section img {
@@ -1212,6 +1239,7 @@ label {
     flex-shrink: 1.5;
     padding: 1rem;
     width: 100%;
+    height: max-content;
     scroll-snap-align: start;
 }
 
@@ -1231,6 +1259,7 @@ label {
 }
 
 .customer-testimonial-quote {
+    height: 325px;
     font-size: 1.8rem;
     font-weight: 400;
     margin-top: 1.5rem;
@@ -1253,6 +1282,7 @@ label {
 
 .customer-testimonial-name {
     width: max-content;
+    height: max-content;
     font-weight: bold;
 }
 
@@ -1320,7 +1350,7 @@ label {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     line-height: 1.2;
 }
 
@@ -1480,10 +1510,11 @@ label {
     .header .menu-toggle {
         display: block;
         width: 50px;
+        height: 50px;
         background: none;
         border: 1.8px solid var(--white);
         border-radius: 99px;
-        font-size: 1.9rem;
+        font-size: 1.5rem;
         color: var(--white);
         cursor: pointer;
         z-index: 1001;
@@ -1493,7 +1524,8 @@ label {
 
     #toggled {
         border: 1.8px solid var(--black);
-        color: var(--black);
+        width: 50px;
+        height: 50px;
     }
 
     .nav-link {
@@ -1516,8 +1548,15 @@ label {
     }
 
     .nav-item:hover {
+        padding: 0 5px;
+        background-color: var(--white);
+        user-select: none;
+    }
+
+    .nav-item::click{
         padding: 0;
         background-color: var(--white);
+        user-select: none;
     }
 
     .nav-item:hover .dropdown-menu {
@@ -1525,6 +1564,8 @@ label {
         top: 100%;
         width: 90%;
         height: fit-content;
+        padding: 0rem auto;
+        padding-top: .5rem;
     }
 
     .dropdown-menu a {
@@ -1777,9 +1818,8 @@ label {
         background-color: var(--dark-theme);
         padding: 10px;
         margin: 0;
-        gap: 1;
+        justify-content: space-between;
     }
-
 
     .tab-button {
         background: var(--dark-theme);
@@ -1851,9 +1891,15 @@ label {
         height: 40px;
     }
 
+    .phone-mockup {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
     .phone-mockup img {
-        margin-left: -30px;
         position: relative;
+
     }
 
     /*# app-features section end*/
@@ -2026,6 +2072,7 @@ label {
 
     .customer-testimonial-quote {
         font-size: 10px;
+        height: fit-content;
     }
 
     .customer-testimonial-image {

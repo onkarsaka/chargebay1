@@ -1,4 +1,4 @@
-import { React, useState} from 'react'
+import { React, useState } from 'react'
 
 import "./ContactPage.css"
 
@@ -98,11 +98,13 @@ const GetInTouch = () => {
                     </div>
                 </section>
 
-                <section className="doubts getintouchdoubts">
-                    <h2>Got more doubts?</h2>
-                    <button className="learn-more-white"><span>All Questions</span></button>
-                </section>
-
+                <AnimatedSection animation='flyIn' direction='down'>
+                    <section className="doubts getintouchdoubts">
+                        <h2>Got more doubts?</h2>
+                        <button className="learn-more-white"><span>All Questions</span></button>
+                    </section>
+                </AnimatedSection>
+                
                 <footer>
                     <Footer />
                 </footer>

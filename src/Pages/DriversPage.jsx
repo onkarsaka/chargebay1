@@ -101,10 +101,13 @@ function AboutChargingPage() {
                     </header>
 
                     <section className="chargings-hero">
+
                         <div className="chargings-hero-content">
-                            <h1>Convenient Charging,<br /> all at this <span className="abt-charging-highlight">One-Stop.</span></h1>
-                            <p>With ChargeBay, you gain control over your charging experience. Its seamlessly integrated amenities and features are designed to work directly with your car and the charger, allowing for guaranteed reservations and a top-notch charging experience whenever you need it.</p>
-                            <h3><span className="highlight-green">3x faster</span> than any other competitors.</h3>
+                            <AnimatedSection animation='flyIn' length={100} direction='left'>
+                                <h1>Convenient Charging,<br /> all at this <span className="abt-charging-highlight">One-Stop.</span></h1>
+                                <p>With ChargeBay, you gain control over your charging experience. Its seamlessly integrated amenities and features are designed to work directly with your car and the charger, allowing for guaranteed reservations and a top-notch charging experience whenever you need it.</p>
+                                <h3><span className="highlight-green">3x faster</span> than any other competitors.</h3>
+                            </AnimatedSection>
                         </div>
 
                         <div className="chargings-hero-image">
@@ -182,7 +185,9 @@ function AboutChargingPage() {
                         <button className="learn-more-white transperant"><span>Learn More</span></button>
                     </div>
                     <div className="evdriversimage">
-                        <img src={chargerimg} alt="" draggable="false" />
+                        <AnimatedSection animation='flyIn' direction='down'>
+                            <img src={chargerimg} alt="" draggable="false" />
+                        </AnimatedSection>
                     </div>
                 </section>
 
@@ -225,7 +230,7 @@ function AboutChargingPage() {
 
                         <div className="abt-charging-why-chargebay-feature">
                             <div className="abt-charging-why-chargebay-icon">
-                                <img src={routeicon} alt="" width={48} height={48}/>
+                                <img src={routeicon} alt="" width={48} height={40} draggable='false' />
                             </div>
                             <p className="abt-charging-why-chargebay-feature-title">Plan Efficient Charging Trips</p>
                         </div>
@@ -233,36 +238,38 @@ function AboutChargingPage() {
                         <div className="abt-charging-why-chargebay-feature">
                             <div className="abt-charging-why-chargebay-icon">
                                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="3" y="6" width="18" height="12" rx="2" stroke="#3A86FF" stroke-width="1" />
+                                    <rect x="3" y="4" width="18" height="12" rx="2" stroke="#3A86FF" stroke-width="1" />
+                                    <line x1="3" y1="6" x2="21" y2="6" stroke="#3A86FF" stroke-width="1" />
                                     <line x1="3" y1="8" x2="21" y2="8" stroke="#3A86FF" stroke-width="1" />
-                                    <line x1="3" y1="10" x2="21" y2="10" stroke="#3A86FF" stroke-width="1" />
-                                    <line x1="5" y1="13" x2="9" y2="13" stroke="#3A86FF" stroke-width="1" />
-                                    <circle cx="17" cy="15" r="1" fill="#3A86FF" />
+                                    <line x1="5" y1="11" x2="9" y2="11" stroke="#3A86FF" stroke-width="1" />
+                                    <circle cx="17" cy="13" r="1" fill="#3A86FF" />
                                 </svg>
                             </div>
                             <p className="abt-charging-why-chargebay-feature-title">Hassle-Free Direct Payment</p>
                         </div>
                     </div>
                 </section>
-
-                <section className="app-download abt-chargings">
-                    <h2>Find out how seamless EV charging can be. Download the ChargeBay app</h2>
-                    <div className="app-buttons">
-                        <img src={playstore} alt="Get it on Google Play" />
-                        <img src={appstore} alt="Download on the App Store" />
-                    </div>
-                </section>
+                <AnimatedSection animation='flyIn' direction='down'>
+                    <section className="app-download abt-chargings">
+                        <h2>Find out how seamless EV charging can be. Download the ChargeBay app</h2>
+                        <div className="app-buttons">
+                            <img src={playstore} alt="Get it on Google Play" />
+                            <img src={appstore} alt="Download on the App Store" />
+                        </div>
+                    </section>
+                </AnimatedSection>
 
                 <section className="discover">
                     <h1>Discover ChargeBay Station</h1>
                     <button className='learn-more transperant'><span>Find Now</span></button>
                 </section>
 
-                <section className="asked-que">
-                    <h2>Frequently Asked Questions?</h2>
-                    <button className="learn-more-white transperant"><span>All Questions</span></button>
-                </section>
-
+                <AnimatedSection animation='flyIn' direction='down'>
+                    <section className="asked-que">
+                        <h2>Frequently Asked Questions?</h2>
+                        <button className="learn-more-white transperant"><span>All Questions</span></button>
+                    </section>
+                </AnimatedSection>
                 <footer>
                     <Footer />
                 </footer>

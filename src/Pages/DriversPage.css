@@ -38,6 +38,7 @@
     font-weight: lighter;
     line-height: 1.3;
     color: var(--white);
+    
 }
 
 .chargings-hero-content h3 {
@@ -175,8 +176,9 @@
 .abt-charging-why-chargebay-icon {
     font-size: 32px;
     color: #3b82f6;
-    margin-right: 16px;
     flex-shrink: 0;
+    margin: auto 0; 
+    margin-right: 16px;
     animation: fadefromupdown 2s ease-in-out infinite;
 }
 
@@ -552,6 +554,7 @@
         font-size: 28px;
         width: 35px;
         margin-right: 25px;
+        align-items: center;
     }
 
     .abt-charging-why-chargebay-feature-title {
@@ -561,6 +564,7 @@
         line-height: 1.5;
         width: 84%;
         margin: 0;
+        margin-top: 5px;
     }
 
     .app-download.abt-chargings {

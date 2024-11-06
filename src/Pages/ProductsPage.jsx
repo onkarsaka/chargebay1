@@ -113,7 +113,7 @@ function ProductsPage() {
 
         <section className="why-chargebay-ecosystem">
           <h1 className="why-chargebay-ecosystem-title">
-            What is the ChargeBay <span className="highlight-blue">Ecosystem</span>?
+            What is the ChargeBay <span className="highlight-blue">Ecosystem?</span>
           </h1>
           {!isMobileView ?
             <img src={ecosystemCard} alt="" draggable='false' />

@@ -37,6 +37,7 @@
     line-height: 1.2;
     margin: 0;
     color: white;
+    margin-bottom: .5rem;
 }
 
 .commercial-hero-content p {
@@ -44,6 +45,7 @@
     line-height: .9;
     color: var(--white);
     line-height: 1.5;
+    margin-bottom: 2.5rem;
 }
 
 .evdestination {
@@ -54,7 +56,7 @@
     padding: 3rem;
     height: auto;
     background-color: var(--dark-theme);
-    border-radius: 29px;
+    border-radius: 19px;
 }
 
 .evdestination div {
@@ -93,7 +95,7 @@
 .evdestination div img {
     width: 100%;
     height: 100%;
-    border-radius: 29px;
+    border-radius: 9px;
 }
 
 @media (max-width: 786px) {
@@ -115,6 +117,7 @@
 
     .commercial-hero-content p {
         font-size: 1.2rem;
+        max-width: 95%;
     }
 
     .evdestination {
@@ -159,6 +162,6 @@
     .evdestination div img {
         width: 100%;
         height: 100%;
-        border-radius: 29px;
+        border-radius: 9px;
     }
 }

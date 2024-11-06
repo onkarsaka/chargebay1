@@ -8,7 +8,7 @@
 .footer-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .footer-left {
@@ -30,8 +30,7 @@
     font-weight: bold;
 }
 
-.address,
-.email {
+.address{
     font-size: 14px;
     line-height: 1.5;
     margin-bottom: 10px;
@@ -39,22 +38,24 @@
 }
 
 .email {
+    font-size: 14px;
     color: white;
+    line-height: 1.5;
 }
 
-.email a{
+.email a {
     text-decoration: none;
     color: white;
 }
 
-.email li{
+.email li {
     list-style-type: none;
 }
 
 .footer-middle {
-    flex: 2;
+    flex: 2.5;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .footer-links ul {
@@ -155,8 +156,10 @@
     }
 
     .footer-middle {
+        flex: 2;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: start;
+        gap: 100px;
         margin-bottom: 50px;
     }
 

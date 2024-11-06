@@ -56,14 +56,16 @@ function CommercialHost() {
           </header>
 
           <section className="commercial-hero">
-            <div className="commercial-hero-content">
-              <h1>Commercial Workspace & Retail Spaces</h1>
-              <p><span className='highlight-green'>For retail developments:</span> An easy and affordable way to attract customers,
-                boost property value, and offer a customer-centric experience for their
-                comfort.<br/>
-                <span className='highlight-green'>For workspaces:</span> Provide employees with an organized charging system aligned with their schedules, without time limits, and at minimal CAPEX.</p>
-              <button className='learn-more transperant'><span>Contact Now</span></button>
-            </div>
+            <AnimatedSection animation='flyIn' length={100} direction='left' >
+              <div className="commercial-hero-content">
+                <h1>Commercial Workspace & Retail Spaces</h1>
+                <p><span className='highlight-green'>For retail developments:</span> An easy and affordable way to attract customers,
+                  boost property value, and offer a customer-centric experience for their
+                  comfort.<br />
+                  <span className='highlight-green'>For workspaces:</span> Provide employees with an organized charging system aligned with their schedules, without time limits, and at minimal CAPEX.</p>
+                <button className='learn-more transperant'><span>Contact Now</span></button>
+              </div>
+            </AnimatedSection>
           </section>
 
         </section>
@@ -120,7 +122,9 @@ function CommercialHost() {
             <div className="help-section-flex">
               <div className="help-section-flex-item">
                 <div className="icon-container">
-                  <img src={port} className="icon" />
+                  <AnimatedSection animation="scaleIn" delay={.5}>
+                    <img src={port} className="icon charger" draggable='false' />
+                  </AnimatedSection>
                 </div>
                 <h3 className="help-section-flex-item-title">
                   Either plan and operate a shareable EV charging ecosystem with your residents
@@ -129,7 +133,9 @@ function CommercialHost() {
 
               <div className="help-section-flex-item">
                 <div className="icon-container">
-                  <img src={station} className="icon" />
+                  <AnimatedSection animation="scaleIn" delay={.5}>
+                    <img src={station} className="icon charger" draggable='false' />
+                  </AnimatedSection>
                 </div>
                 <h3 className="help-section-flex-item-title">
                   Make your existing charging infrastructure into an intelligent ecosystem.
@@ -159,16 +165,18 @@ function CommercialHost() {
         </section>
 
         <section className="trust-section">
-          <h1>Companies Trust ChargeBay, so should you</h1>
+          {!isMobileView ? <h1>Companies Trust ChargeBay, so should you</h1> : <h1>Featured in</h1>}
           <div className="trust-section-logos">
-            <img src={featured} alt="Featured" />
+            <img src={featured} alt="Featured" draggable='false' />
           </div>
         </section>
 
-        <section className="asked-que">
-          <h2>Frequently Asked Questions?</h2>
-          <button className="learn-more-white transperant"><span>All Questions</span></button>
-        </section>
+        <AnimatedSection animation='flyIn' direction='down'>
+          <section className="asked-que">
+            <h2>Frequently Asked Questions?</h2>
+            <button className="learn-more-white transperant"><span>All Questions</span></button>
+          </section>
+        </AnimatedSection>
 
         <footer>
           <Footer />

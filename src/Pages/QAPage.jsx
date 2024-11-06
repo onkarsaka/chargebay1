@@ -7,6 +7,7 @@ import Footer from '../Components/Footer';
 import MegaMenus from '../Components/MegaMenus';
 
 import QAbannerimg from '../Images/QAbanner.png'
+import AnimatedSection from '../Components/AnimatedSection';
 function QAPage() {
 
   const isMobileView = window.innerWidth <= 768;
@@ -139,7 +140,9 @@ function QAPage() {
           </header>
 
           <section className='qa-hero'>
-            <h1>ChargeBay <span className='highlight-blue'>Q&A : </span><br />Your Questions Answered!</h1>
+            <AnimatedSection animation='flyIn' direction='left' length={100}>
+              <h1>ChargeBay <span className='highlight-blue'>Q&A : </span><br />Your Questions Answered!</h1>
+            </AnimatedSection>
           </section>
         </section>
 
@@ -170,7 +173,7 @@ function QAPage() {
                 <div key={index} className={`accordion-item ${item.firstcard} ${item.lastcard} ${activeIndex === index ? 'active' : ''}`}>
                   <div className="accordion-header" onClick={() => handleToggle(index)}>
                     <span className='driversQAheader'>{item.title}</span>
-                    <span className='accordion-item-icon'>{activeIndex === index ? <FiX size={20} /> : <FiPlus size={20} />}</span>
+                    <span className='accordion-item-icon'>{activeIndex === index ? (isMobileView ? <FiX size={15} /> : <FiX size={20} />) : (isMobileView ? <FiPlus size={15} /> : <FiPlus size={20} />)}</span>
                   </div>
                   <div className="accordion-content">
                     <p>{item.description}</p>
@@ -191,7 +194,7 @@ function QAPage() {
                 <div key={index} className={`accordion-item ${item.firstcard} ${item.lastcard} ${activeIndex === index ? 'active' : ''}`}>
                   <div className="accordion-header driversQA" onClick={() => handleToggle(index)}>
                     <span className='driversQAheader'>{item.title}</span>
-                    <span className='accordion-item-icon'>{activeIndex === index ? <FiX size={20} /> : <FiPlus size={20} />}</span>
+                    <span className='accordion-item-icon'>{activeIndex === index ? (isMobileView ? <FiX size={15} /> : <FiX size={20} />) : (isMobileView ? <FiPlus size={15} /> : <FiPlus size={20} />)}</span>
                   </div>
                   <div className="accordion-content">
                     <p>{item.description}</p>
@@ -217,7 +220,7 @@ function QAPage() {
               <div key={index} className={`accordion-item ${item.firstcard} ${item.lastcard} ${activeIndex === index ? 'active' : ''}`}>
                 <div className="accordion-header" onClick={() => handleToggle(index)}>
                   <span className='driversQAheader'>{item.title}</span>
-                  <span className='accordion-item-icon'>{activeIndex === index ? <FiX size={20} /> : <FiPlus size={20} />}</span>
+                  <span className='accordion-item-icon'>{activeIndex === index ? (isMobileView ? <FiX size={15} /> : <FiX size={20} />) : (isMobileView ? <FiPlus size={15} /> : <FiPlus size={20} />)}</span>
                 </div>
                 <div className="accordion-content">
                   <p>{item.description}</p>

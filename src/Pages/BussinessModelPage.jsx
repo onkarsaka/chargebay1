@@ -1,4 +1,4 @@
-import { React, useState,} from 'react'
+import { React, useState, } from 'react'
 // import { Check, X } from 'lucide-react'
 import "./BussinessModelPage.css"
 
@@ -64,32 +64,34 @@ function BussinessModelPage() {
                         ChargeBay has <span className="highlight-blue">3 Unique</span> Models
                     </h1>
                     <p className="unique-model-subheader">
-                        However, each one comes with ZERO Network fees, and complimentary manufacturer's warranty.<br />
+                        However, each one comes with ZERO Network fees, and complimentary manufacturer's warranty.
                         Because we don't believe in extorting money by selling equipment that doesn't work.
                     </p>
-                    <div className="unique-model-models">
-                        <div className="unique-model-card">
-                            <h2>Host owned:<br />
-                                Charger Purchase Model</h2>
-                            <p>
-                                A simple buy-out model for total control and high revenue<br /> generation. Buy out a charger from ChargeBay for a nominal yearly subscription or use your own equipment for a custom deal with ChargeBay.
-                            </p>
+                    <AnimatedSection animation='flyIn' direction='down'>
+                        <div className="unique-model-models">
+                            <div className="unique-model-card">
+                                <h2>Host owned:<br />
+                                    Charger Purchase Model</h2>
+                                <p>
+                                    A simple buy-out model for total control and high revenue generation. Buy out a charger from ChargeBay for a nominal yearly subscription or use your own equipment for a custom deal with ChargeBay.
+                                </p>
+                            </div>
+                            <div className="unique-model-card">
+                                <h2>ChargeBay Partner:<br />
+                                    Revenue sharing model</h2>
+                                <p>
+                                    We know the Cost of Capital is high, so earn revenue and attract users with even lower investments. Let ChargeBay co-invest to EV-nize your location. Help us prepare the site and install chargers we pay for at a cheaper subscription.
+                                </p>
+                            </div>
+                            <div className="unique-model-card">
+                                <h2>Turn-key solution:<br />
+                                    ChargeBay owns Everything</h2>
+                                <p>
+                                    Completely Hassle-free for the host. Select Locations ONLY. Attract customers, without worries, let ChargeBay figure out how for only $100/mo.<br /> PS - People pay more on a gym membership that they don't use.
+                                </p>
+                            </div>
                         </div>
-                        <div className="unique-model-card">
-                            <h2>ChargeBay Partner:<br />
-                                Revenue sharing model</h2>
-                            <p>
-                                We know the Cost of Capital is high, so earn revenue and attract users with even lower investments.<br /> Let ChargeBay co-invest to EV-nize your location. Help us prepare the site and install chargers we pay for at a cheaper subscription.
-                            </p>
-                        </div>
-                        <div className="unique-model-card">
-                            <h2>Turn-key solution:<br />
-                                ChargeBay owns Everything</h2>
-                            <p>
-                                Completely Hassle-free for the host. Select Locations ONLY.<br /> Attract customers, without worries, let ChargeBay figure out how for only $100/mo.<br /> PS - People pay more on a gym membership that they don't use.
-                            </p>
-                        </div>
-                    </div>
+                    </AnimatedSection>
                 </div>
 
                 <section className="model-details">
@@ -193,16 +195,18 @@ function BussinessModelPage() {
                         <p>1. Installation Can Be Covered By ChargeBay And Paid Through A Monthly Subscription. 10% Discount If Paid Upfront Annually.</p>
                         <p>2. Revenue Split Negotiable On A Client-By-Client Basis.</p>
                     </div> */}
-
-                    {!isMobileView && (<img src={modeldeatailsimg} alt="" draggable='false'/>)}
-                    {isMobileView && (<img src={modeldeatailsimgmob} alt="" draggable='true'/>)}
+                    <AnimatedSection animation='flyIn' direction='down' >
+                        {!isMobileView && (<img src={modeldeatailsimg} alt="" draggable='false' />)}
+                        {isMobileView && (<img src={modeldeatailsimgmob} alt="" draggable='false' />)}
+                    </AnimatedSection>
                 </section>
 
-                <section className="doubts bussinessmodel">
-                    <h2>Got more doubts?</h2>
-                    <button className="learn-more-white transperant"><span>All Questions</span></button>
-                </section>
-
+                <AnimatedSection animation='flyIn' direction='down' >
+                    <section className="doubts bussinessmodel">
+                        <h2>Got more doubts?</h2>
+                        <button className="learn-more-white transperant"><span>All Questions</span></button>
+                    </section>
+                </AnimatedSection>
                 <footer>
                     <Footer />
                 </footer>

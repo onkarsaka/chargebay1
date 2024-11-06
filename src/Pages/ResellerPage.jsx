@@ -100,7 +100,7 @@ const Partners = () => {
                     <section className="partners-hero">
                         <AnimatedSection animation="flyIn" length={100} direction='left'>
                             <div className="partners-hero-content">
-                                <h1>Become a ChargeBay Partner for {isMobileView ? ' ': <br />}Developing Superior <span className='highlight-green'>One-Stop</span> EV Charging Ecosystems</h1>
+                                <h1>Become a ChargeBay Partner for {isMobileView ? ' ' : <br />}Developing Superior <span className='highlight-green'>One-Stop</span> EV Charging Ecosystems</h1>
                                 <p>With ChargeBay's EV charging solution, you can seamlessly provide an exceptional charging experience to your customers, allowing you to concentrate on your core business and leave the charging worries to us.</p>
                                 <button className='learn-more transperant'><span>Contact Now</span></button>
                             </div>
@@ -119,8 +119,8 @@ const Partners = () => {
                         {collabdata.map((item, index) => (
                             <div key={index} className={`accordion-item ${item.firstcard} ${item.lastcard} ${activeIndex === index ? 'active' : ''}`}>
                                 <div className="accordion-header" onClick={() => handleToggle(index)}>
-                                    <span>{item.title}</span>
-                                    <span className='accordion-item-icon'>{activeIndex === index ? <FiX size={20} /> : <FiPlus size={20} />}</span>
+                                    <span className='accordion-item-header'>{item.title}</span>
+                                    <span className='accordion-item-icon'>{activeIndex === index ? (isMobileView ? <FiX size={15} /> : <FiX size={20} />) : (isMobileView ? <FiPlus size={15} /> : <FiPlus size={20} />)}</span>
                                 </div>
                                 <div className="accordion-content">
                                     <p>{item.description}</p>
@@ -147,11 +147,13 @@ const Partners = () => {
                     <button className='learn-more transperant'><span>Contact Now</span></button>
                 </section>
 
-                <section className="doubts getintouchdoubts">
-                    <h2>Got more doubts?</h2>
-                    <button className="learn-more-white transperant"><span>All Questions</span></button>
-                </section>
-
+                <AnimatedSection animation='flyIn' length={100} direction='down'>
+                    <section className="doubts getintouchdoubts">
+                        <h2>Got more doubts?</h2>
+                        <button className="learn-more-white transperant"><span>All Questions</span></button>
+                    </section>
+                </AnimatedSection>
+                
                 <footer>
                     <Footer />
                 </footer>

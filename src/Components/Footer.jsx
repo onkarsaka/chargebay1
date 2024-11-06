@@ -24,7 +24,7 @@ function Footer() {
                             <img src={logo} alt="ChargeBay Logo" className="logo-img" />
                         </div>
                         <span className="address">3702 Spectrum Blvd. Ste. 165<br />Tampa, FL 33612, USA</span>
-                        <span className="email"><br></br>Email:
+                        <span className="email"><br />Email:
                                 <li><a href={`mailto:${email1}`} onClick={handleEmailClick}>{email1}</a></li>
                                 <li><a href={`mailto:${email2}`} onClick={handleEmailClick}>{email2}</a></li>
                         </span>

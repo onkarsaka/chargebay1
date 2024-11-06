@@ -27,7 +27,7 @@ export const scaleIn = {
   visible: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 1, ease: 'easeOut' },
   },
 };
 
@@ -94,4 +94,3 @@ export const appearDisappear = (delayTime = 1) => ({
     transition: { duration: delayTime, ease: 'easeOut' },
   },
 });
-

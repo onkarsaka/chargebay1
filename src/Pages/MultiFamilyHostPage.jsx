@@ -79,7 +79,7 @@ function HousingPage() {
             title: "Make an Impact",
             description: "Become a green leader and be eligible for ESG credits",
             image: esgimg,
-            lastcard : "lastcard"
+            lastcard: "lastcard"
         }
     ];
 
@@ -131,7 +131,7 @@ function HousingPage() {
                 <section className="consumer-reports">
                     <h1 className="consumer-reports-title">
                         75% EV drivers prefer homes with EV chargers,
-                        <br />
+                        {!isMobileView ? <br /> : ' '}
                         According to <span className="highlight">Consumer reports</span>
                     </h1>
                     <button className="learn-more contbtn"><span>Contact Our Experts</span></button>
@@ -153,7 +153,7 @@ function HousingPage() {
 
                 <section className="why-chargebay-section">
                     <h2 className="why-chargebay-title">
-                        Why should you consider <span className="why-chargebay-highlight">ChargeBay</span>?
+                        Why should you consider <span className="why-chargebay-highlight">ChargeBay?</span>
                     </h2>
                     <div className="why-chargebay-cards">
                         <div className="why-chargebay-card card1">
@@ -204,7 +204,9 @@ function HousingPage() {
                         <div className="help-section-flex">
                             <div className="help-section-flex-item">
                                 <div className="icon-container">
-                                    <img src={port} className="icon" draggable='false'/>
+                                    <AnimatedSection animation="scaleIn" delay={.5}>
+                                        <img src={port} className="icon charger" draggable='false' />
+                                    </AnimatedSection>
                                 </div>
                                 <h3 className="help-section-flex-item-title">
                                     Either plan and operate a shareable EV charging ecosystem with your residents
@@ -213,7 +215,9 @@ function HousingPage() {
 
                             <div className="help-section-flex-item">
                                 <div className="icon-container">
-                                    <img src={station} className="icon" draggable='false'/>
+                                    <AnimatedSection animation="scaleIn" delay={.5}>
+                                        <img src={station} className="icon station" draggable='false' />
+                                    </AnimatedSection>
                                 </div>
                                 <h3 className="help-section-flex-item-title">
                                     Make your existing charging infrastructure into an intelligent ecosystem.
@@ -243,9 +247,9 @@ function HousingPage() {
                 </section>
 
                 <section className="trust-section">
-                    <h1>Companies Trust ChargeBay, so should you</h1>
+                    {!isMobileView ? <h1>Companies Trust ChargeBay, so should you</h1> : <h1>Featured in</h1>}
                     <div className="trust-section-logos">
-                        <img src={featured} alt="Featured" draggable='false'/>
+                        <img src={featured} alt="Featured" draggable='false' />
                     </div>
                 </section>
 
@@ -273,10 +277,12 @@ function HousingPage() {
                     </div>
                 </section>
 
-                <section className="asked-que multifamily">
-                    <h2>Frequently Asked Questions?</h2>
-                    <button className="learn-more-white transperant"><span>All Questions</span></button>
-                </section>
+                <AnimatedSection animation='flyIn' direction='down'>
+                    <section className="asked-que multifamily">
+                        <h2>Frequently Asked Questions?</h2>
+                        <button className="learn-more-white transperant"><span>All Questions</span></button>
+                    </section>
+                </AnimatedSection>
 
                 <AnimatedSection animation='slideIn' direction='up'>
                     <section className="case-study">

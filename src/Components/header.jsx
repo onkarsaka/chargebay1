@@ -10,18 +10,22 @@ import logomob from "../Images/Logo Black.png"
 
 import { ChevronDown } from 'lucide-react'
 
-
-
 const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
 
   const navs = document.getElementsByClassName("nav-item")
 
-  const handleMouseEnter = (item) => {
-    setIsNavItemHover(item);
-  };
+  const [activeMenu, setActiveMenu] = useState(null);
 
-  const handleMouseLeave = () => {
-    setIsNavItemHover(null);
+  // const handleMouseEnter = (item) => {
+  //   setIsNavItemHover(item);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   setIsNavItemHover(null);
+  // };
+
+  const handleNavItemClick = (item) => {
+    setIsNavItemHover(item);
   };
 
   return (
@@ -36,21 +40,18 @@ const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
           <nav id='desknavs'>
             <ul>
               <li className="nav-item" id='drivers'
-                onMouseEnter={() => handleMouseEnter('drivers')}
-                onMouseLeave={handleMouseLeave}
+                onClick={() => handleNavItemClick('drivers')}
               >
                 <a className="nav-link">Drivers <ChevronDown className="dropdown-arrow" /></a>
               </li>
               <li className="nav-item" id='hosts'
-                onMouseEnter={() => handleMouseEnter('hosts')}
-                onMouseLeave={handleMouseLeave}
+                onClick={() => handleNavItemClick('hosts')}
               >
                 <a className="nav-link">Hosts <ChevronDown className="dropdown-arrow"></ChevronDown></a>
 
               </li>
               <li className="nav-item" id='solution'
-                onMouseEnter={() => handleMouseEnter('solution')}
-                onMouseLeave={handleMouseLeave}
+                onClick={() => handleNavItemClick('solution')}
               >
                 <a className="nav-link">Our Solution <ChevronDown className="dropdown-arrow"></ChevronDown></a>
               </li>
@@ -71,7 +72,11 @@ const Header = ({ isMenuOpen, toggleMenu, toggleForm, setIsNavItemHover }) => {
           </nav>
           <nav id='mobnavs'>
             <button id={isMenuOpen ? 'toggled' : ''} className="menu-toggle" onClick={toggleMenu}>
-              {isMenuOpen ? '✖' : '☰'}
+              {isMenuOpen ?
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" height="45px" width="45px" viewBox="0 0 489 489">
+                   <line x1="113.5" y1="150" x2="275.5" y2="350" stroke="#000" stroke-width="30"></line>
+                   <line x1="275.5" y1="150" x2="113.5" y2="350" stroke="#000" stroke-width="30"></line>
+                </svg> : '☰'}
             </button>
             <ul className={isMenuOpen ? 'open' : 'close'}>
               <div className="logo-nav">

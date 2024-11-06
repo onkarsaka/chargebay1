@@ -95,6 +95,7 @@ const ChargeBayHome = () => {
       text: "We'll maximize the number of EV chargers you can safely install without triggering substantial infrastructure costs. Our Intelligent Load Manager, ChargeBay continuously manages the electricity being consumed by the chargers based on the capacity that is available at any given moment.",
       image: reducecost,
       alt: 'EV Charging Station',
+      specialImgCost: 'specialImgCost',
     },
     efficient: {
       text: "Our efficient hardware solutions optimize energy distribution, ensuring maximum performance with minimal infrastructure impact. ChargeBay's smart technology adapts to your specific needs, providing a cost-effective and scalable charging solution.",
@@ -165,7 +166,6 @@ const ChargeBayHome = () => {
       <div className="card-content">
         <h3 className="card-title">{title}</h3>
         <button className="card-button">{buttonText}</button>
-        <img src={optionalcharger} className='card-charger' />
       </div>
     </div>
   );
@@ -180,7 +180,7 @@ const ChargeBayHome = () => {
     },
     {
       id: 2,
-      quote: "ChargeBay makes EV charging a breeze! The app is easy to use, with accurate station availability and seamless payment options like Apple Pay and cards. It's been my go-to for convenient, stress-free charging! The interface is intuitive, and I love how quickly I can find nearby stations. Highly recommend it to all EV owners!",
+      quote: "ChargeBay has completely simplified my EV charging experience! The app is super user-friendly, providing real-time station availability. It's my trusted solution for quick and hassle-free charging. The layout is clear and makes finding nearby stations a breeze. I'd recommend it to any EV driver looking for reliable and convenient charging!",
       name: "Wade Warren",
       location: "Tampa, Florida",
       image: { person }
@@ -314,7 +314,7 @@ const ChargeBayHome = () => {
                   <button className="learn-more transperant"><span>Learn More</span></button>
                 </div>
                 <div className="image-container">
-                  <img src={content[activeSection].image} alt={content[activeSection].alt} />
+                  <img src={content[activeSection].image} alt={content[activeSection].alt} className={content[activeSection].specialImgCost}/>
                 </div>
               </div>
             </div>
@@ -407,20 +407,19 @@ const ChargeBayHome = () => {
                   description=""
                   buttonText="Learn More"
                   imageSrc={lookingfor2}
-                  optionalcharger={chargerimg}
                 />
               </div>
             </div>
           </AnimatedSection>
         </section>
 
-        <section id="map-section" className="map" >
+        {/* <section id="map-section" className="map" >
           <h2>ChargeBay- Making EV Charging <span className="highlight-green">Easy</span></h2>
           <div className="map-container">
             <img src={mapimg} alt="" className='mapdesk' draggable='false' />
             <img src={mapimgmob} alt="" className='mapmob' draggable='false' />
           </div>
-        </section>
+        </section> */}
 
         <section className="app-download">
           <h2>Find out how seamless EV charging can be. Download the ChargeBay app</h2>
@@ -441,7 +440,7 @@ const ChargeBayHome = () => {
           <AnimatedSection animation='flyIn' direction='down'>
             <div className='revolution'>
               <h1>Electric <span className='highlight-blue'>Revolution</span>  in the US in numbers :</h1>
-              <h3>There is a gap in the no of EV and available chargers, <span className='highlight-blue'>Chargeay</span> Helps to fill this gap</h3>
+              <h3>There is a gap in the no of EV and available chargers, <span className='highlight-blue'>ChargeBay</span> Helps to fill this gap</h3>
               <button className='learn-more-white transperant'><span>Learn More</span></button>
             </div>
             <img src={revolution} alt="revolution image" />

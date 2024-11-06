@@ -9,6 +9,8 @@ function MegaMenus({ activeNavItem, setIsNavItemHover, toggleForm }) {
 
   const navsitm = document.getElementById(activeNavItem)
 
+  const navItems = document.getElementsByClassName("nav-item")
+
   const handleMouseEnter = () => {
     setIsNavItemHover(activeNavItem);
     navsitm.style.marginRight = '16px';
@@ -23,6 +25,25 @@ function MegaMenus({ activeNavItem, setIsNavItemHover, toggleForm }) {
     navsitm.style.backgroundColor = "#0000";
   };
 
+  for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener('mouseenter', function () {
+      // Apply styles on hover
+      navItems[i].style.marginRight = '16px';
+      navItems[i].style.marginLeft = '0';
+      navItems[i].style.padding = '5px 8px';
+      navItems[i].style.borderRadius = '29px';
+      navItems[i].style.backgroundColor = '#7e7e7e49';
+    });
+
+    navItems[i].addEventListener('mouseleave', function () {
+      // Remove the styles when not hovering
+      navItems[i].style.marginRight = '';
+      navItems[i].style.marginLeft = '';
+      navItems[i].style.padding = '';
+      navItems[i].style.borderRadius = '';
+      navItems[i].style.backgroundColor = '';
+    });
+  }
 
   switch (activeNavItem) {
     case 'drivers':

@@ -14,7 +14,6 @@
   padding-top: 8rem;
 }
 
-
 .uniquemodel-section {
   display: flex;
   width: auto;
@@ -218,7 +217,7 @@ tbody tr:last-child td {
 
   .partners-hero-content.bussinessmodelhero {
     padding-top: 4rem;
-    padding-bottom: 15rem;
+    padding-bottom: 5rem;
   }
 
   .unique-model-container {
